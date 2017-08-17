@@ -23,7 +23,7 @@ public class ServiceCampanhaController {
 		List<Campanha> campanhaJSON = new ArrayList<>();
 		CampanhaRepository repo = new CampanhaRepository();
 		
-		campanhasDAO = repo.listaTodos();
+		campanhasDAO = repo.listaTodosVigentes();
 		
 		campanhasDAO.forEach( c -> campanhaJSON.add( new Campanha(c.getId(),c.getNome() , c.getDataVigencia() )));
 		
