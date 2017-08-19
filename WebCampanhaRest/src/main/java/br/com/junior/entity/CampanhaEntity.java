@@ -3,12 +3,15 @@ package br.com.junior.entity;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.CollectionType;
 
 /**
  * 
@@ -36,6 +39,7 @@ public class CampanhaEntity implements Serializable{
 	private LocalDate dataInicio;
 	
 	@Convert(converter=LocalDateAttributeConverter.class)
+	@Column(unique=true)
 	private LocalDate dataVigencia;
 	
 	

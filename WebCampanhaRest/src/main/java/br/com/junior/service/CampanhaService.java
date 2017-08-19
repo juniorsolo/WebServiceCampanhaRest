@@ -4,11 +4,14 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.Local;
 import javax.ejb.Stateful;
+import javax.ejb.Stateless;
 
 import br.com.junior.entity.CampanhaEntity;
 
-@Stateful
+@Local
+@Stateless
 public class CampanhaService {
 	
 	
